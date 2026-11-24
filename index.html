@@ -1,0 +1,374 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Little World for Appu 💗</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- BACKGROUND MUSIC -->
+
+<audio id="birthdayMusic" loop>
+    <source src="music/birthday-song.mp3" type="audio/mpeg">
+</audio>
+
+<button id="musicToggle" class="music-toggle" title="Play or pause music">
+    ♫
+</button>
+
+    <div class="floating-elements" id="floatingElements"></div>
+
+    <main class="welcome-screen">
+
+        <div class="welcome-card">
+
+            <div class="top-decoration">✧･ﾟ: *✧･ﾟ:* 💗 *:･ﾟ✧*:･ﾟ✧</div>
+
+            <p class="small-heading">A LITTLE SURPRISE FOR SOMEONE SPECIAL</p>
+
+            <h1>Hey, Appu! <span>♡</span></h1>
+
+            <div class="divider">୨୧</div>
+
+            <p class="welcome-message">
+                Someone has created a little world
+                filled with love, memories and magic...
+                just for you, sweetheart.
+            </p>
+
+            <p class="invitation">
+                Are you ready to enter, lovie?
+            </p>
+
+            <button class="surprise-btn" id="openSurprise">
+                Open Your Surprise ✨
+            </button>
+
+            <p class="bottom-note">
+                Made with lots of love, just for you ♡
+            </p>
+
+        </div>
+
+    </main>
+    <!-- Birthday Cake Screen -->
+<section class="birthday-screen" id="birthdayScreen">
+
+    <p class="birthday-tag">A SPECIAL DAY FOR SOMEONE SPECIAL</p>
+
+    <h1>Happy 20th Birthday, Appu! ♡</h1>
+
+    <p class="cake-message">
+        Two decades of magic, laughter and beautiful memories.
+    </p>
+
+    <div class="cake" id="birthdayCake">🎂</div>
+
+    <h2 id="wishText">Make a wish, Appu! ✨</h2>
+
+    <button class="surprise-btn" id="blowCandles">
+        Blow the Candles 🕯️
+    </button>
+    <p id="afterWish" class="after-wish">
+    Your wish has been sent to the universe! ✨💗
+</p>
+
+<button class="surprise-btn" id="nextToBalloons">
+    Let's Celebrate! 🎈
+</button>
+</section>
+<!-- BALLOON SURPRISE SECTION -->
+<section class="balloon-screen" id="balloonScreen">
+
+    <p class="birthday-tag">A LITTLE MORE MAGIC FOR YOU</p>
+
+    <h1>Pop the Balloons, Appu! 🎈</h1>
+
+    <p class="balloon-instruction">
+        Every balloon has a little surprise waiting for you. 💗
+    </p>
+
+    
+<div class="balloon-container">
+
+    <div class="balloon-wrapper">
+        <div class="balloon" data-message="You make ordinary days feel special! 💕">🎈</div>
+        <p class="pop-message"></p>
+    </div>
+
+    <div class="balloon-wrapper">
+        <div class="balloon" data-message="Your smile is one of my favourite things! 🌸">🎈</div>
+        <p class="pop-message"></p>
+    </div>
+
+    <div class="balloon-wrapper">
+        <div class="balloon" data-message="Never stop being your wonderful self! ✨">🎈</div>
+        <p class="pop-message"></p>
+    </div>
+
+    <div class="balloon-wrapper">
+        <div class="balloon" data-message="Here's to countless more memories together! 🦋">🎈</div>
+        <p class="pop-message"></p>
+    </div>
+
+    <div class="balloon-wrapper">
+        <div class="balloon" data-message="You deserve all the happiness in the world! 💗">🎈</div>
+        <p class="pop-message"></p>
+    </div>
+
+    <div class="balloon-wrapper">
+        <div class="balloon" data-message="Happy Birthday once again, Appu! 🎂">🎈</div>
+        <p class="pop-message"></p>
+    </div>
+
+</div>
+
+    <p id="balloonMessage"></p>
+
+    <p id="balloonCounter">Balloons popped: 0/6</p>
+
+    <button class="surprise-btn" id="nextToParty" style="display:none;">
+        Let the Party Begin! 🎉
+    </button>
+
+</section>
+
+<!-- BIRTHDAY PARTY SCREEN -->
+
+<section class="party-screen" id="partyScreen">
+
+    <p class="birthday-tag">THE CELEBRATION BEGINS!</p>
+
+    <h1>It's Party Time, Appu! 🎉</h1>
+
+    <p class="party-subtitle">
+        Because someone as special as you deserves the biggest celebration!
+    </p>
+
+    <div class="party-popper" id="partyPopper">
+        🎉
+    </div>
+
+    <h2>Let's Make Some Noise! 💗</h2>
+
+    <button class="surprise-btn" id="popConfetti">
+        POP THE PARTY! 🎊
+    </button>
+
+    <div id="confettiContainer"></div>
+
+    <p id="partyMessage"></p>
+
+    <button class="surprise-btn" id="nextToScrapbook">
+        Open Our Memories 📸
+    </button>
+
+</section>
+
+<!-- PHOTO SCRAPBOOK SCREEN -->
+
+<section class="scrapbook-screen" id="scrapbookScreen">
+
+    <p class="birthday-tag">A LITTLE BOX OF MEMORIES</p>
+
+    <h1>Our Little World ♡</h1>
+
+    <p class="scrapbook-subtitle">
+        Every picture holds a memory, and every memory holds a piece of my heart.
+    </p>
+
+    <div class="scrapbook-gallery">
+
+        <div class="polaroid">
+            <img src="images/photo1.jpeg" alt="Our memory 1">
+            <p>One of my favourite memories ♡</p>
+        </div>
+
+        <div class="polaroid">
+            <img src="images/photo2.jpeg" alt="Our memory 2">
+            <p>Some moments are simply precious ✨</p>
+        </div>
+
+        <div class="polaroid">
+            <img src="images/photo3.jpeg" alt="Our memory 3">
+            <p>Us being us 💗</p>
+        </div>
+
+        <div class="polaroid">
+            <img src="images/photo4.jpeg" alt="Our memory 4">
+            <p>A memory worth keeping 🌸</p>
+        </div>
+
+        <div class="polaroid">
+            <img src="images/photo5.jpeg" alt="Our memory 5">
+            <p>Little moments, big happiness</p>
+        </div>
+
+        <div class="polaroid">
+            <img src="images/photo6.jpeg" alt="Our memory 6">
+            <p>Forever a favourite 📸</p>
+        </div>
+
+        <div class="polaroid">
+            <img src="images/photo7.jpeg" alt="Our memory 7">
+            <p>Making memories together ♡</p>
+        </div>
+
+        <div class="polaroid">
+            <img src="images/photo8.jpeg" alt="Our memory 8">
+            <p>Just another beautiful day</p>
+        </div>
+
+        <div class="polaroid">
+            <img src="images/photo9.jpeg" alt="Our memory 9">
+            <p>My favourite kind of chaos 💕</p>
+        </div>
+
+        <div class="polaroid">
+            <img src="images/photo10.jpeg" alt="Our memory 10">
+            <p>Moments I won't forget</p>
+        </div>
+
+        <div class="polaroid">
+            <img src="images/photo11.jpeg" alt="Our memory 11">
+            <p>Little pieces of happiness</p>
+        </div>
+
+        <div class="polaroid">
+            <img src="images/photo12.jpeg" alt="Our memory 12">
+            <p>And the memories keep growing ✨</p>
+        </div>
+
+        <div class="polaroid">
+            <img src="images/photo13.jpeg" alt="Our memory 13">
+            <p>To many more adventures! 💗</p>
+        </div>
+
+    </div>
+
+    <button class="surprise-btn" id="nextToLetter">
+        One Last Little Surprise 💌
+    </button>
+
+</section>
+
+<!-- FINAL BIRTHDAY LETTER -->
+
+<section class="letter-screen" id="letterScreen">
+
+    <!-- ENVELOPE -->
+
+    <div class="envelope-wrapper" id="envelopeWrapper">
+
+        <div class="envelope">
+            <div class="envelope-flap"></div>
+            <div class="envelope-body"></div>
+
+            <button class="heart-seal" id="openLetter">
+                ♥
+            </button>
+        </div>
+
+        <p class="envelope-text">A little letter for you ♡</p>
+        <p class="envelope-hint">Tap the heart to open 💌</p>
+
+    </div>
+
+    <!-- LETTER CONTENT -->
+
+    <div class="letter-container" id="letterContainer" style="display: none;">
+
+    <div class="letter-container">
+
+        <div class="letter-decoration">♡</div>
+
+        <p class="birthday-tag">A LITTLE MESSAGE FOR YOU</p>
+
+        <h1>Dear Appu,</h1>
+
+        <div class="letter-content">
+
+            <p>
+                First of all, HAPPY BIRTHDAY, YOU CRAZY HUMAN! 🎀
+                Congratulations on surviving another year of being
+                this dramatic, adorable and impossible to replace.
+            </p>
+
+            <p>
+                Honestly, I don't even know where to begin. There are
+                so many memories, so many silly moments and so many
+                things that I probably don't say often enough.
+            </p>
+
+            <p>
+                But one thing I know for sure is that having you in
+                my life is something I'll always be grateful for.
+                Thank you for being you, for all the laughs, and
+                for making ordinary days feel special.
+            </p>
+
+            <p>
+                I hope this new chapter brings you endless happiness,
+                beautiful opportunities, unexpected adventures and
+                everything your heart wishes for.
+            </p>
+
+            <p>
+                And no matter how much older you get, please don't
+                become too mature. Someone has to keep the madness alive! 😂
+            </p>
+
+            <p class="letter-ending">
+                Here's to more memories, more laughter and many
+                more birthdays together.
+            </p>
+
+            <h2>Lots of love, ♡</h2>
+            <p class="signature">Your forever friend 💗</p>
+
+        </div>
+
+        <div class="letter-footer">Made with endless love ✨</div>
+        <button id="finishLetter" class="next-button">
+    One Last Surprise ✨
+</button>
+    </div>
+
+</section>
+<!-- FINAL BIRTHDAY SCREEN -->
+
+<section class="final-screen" id="finalScreen">
+
+    <div class="final-content">
+
+        <h1>And That's a Little Piece of My Heart 💗</h1>
+
+        <p>
+            Made with love, memories, and a million little moments.
+        </p>
+
+        <h2>Happy Birthday, Appu! 🎂</h2>
+
+        <p class="final-note">
+            Here's to many more memories together. ✨
+        </p>
+
+        <div class="final-hearts">♡ ✧ ♡</div>
+
+    </div>
+
+</section>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
