@@ -1037,3 +1037,283 @@ h1 span {
 #finishLetter:active {
     transform: scale(0.96);
 }
+
+/* ===== SECRET BIRTHDAY LOCK SCREEN ===== */
+
+.lock-screen {
+    min-height: 100vh;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 35px;
+    background: linear-gradient(135deg, #ffe4ef, #f3e5ff, #fff0f5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.lock-layout {
+    width: 100%;
+    max-width: 1150px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 55px;
+}
+
+/* LEFT PHOTO SECTION */
+
+.lock-photo-section {
+    text-align: center;
+    color: #a94f7c;
+}
+
+.photo-decoration {
+    position: relative;
+    width: 350px;
+    height: 350px;
+    margin: 0 auto 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.heart-photo-frame {
+    width: 270px;
+    height: 270px;
+    overflow: hidden;
+    filter: drop-shadow(0 12px 18px rgba(194, 91, 143, 0.25));
+    clip-path: path("M 135 250 C 115 230 10 155 10 85 C 10 15 100 -10 135 55 C 170 -10 260 15 260 85 C 260 155 155 230 135 250 Z");
+    transform: rotate(-3deg);
+}
+
+.heart-photo-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.decor {
+    position: absolute;
+    color: #d76e9f;
+    font-size: 2.5rem;
+    z-index: 2;
+    animation: lockFloat 3s ease-in-out infinite alternate;
+}
+
+.decor-one {
+    top: 5px;
+    left: 35px;
+}
+
+.decor-two {
+    top: 35px;
+    right: 15px;
+}
+
+.decor-three {
+    bottom: 25px;
+    left: 5px;
+}
+
+.decor-four {
+    bottom: 15px;
+    right: 15px;
+}
+
+@keyframes lockFloat {
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(-10px);
+    }
+}
+
+.lock-photo-section h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.8rem;
+    margin: 10px 0;
+}
+
+.lock-photo-section p {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #98617f;
+}
+
+/* RIGHT KEYPAD PANEL */
+
+.lock-panel {
+    max-width: 420px;
+    width: 100%;
+    margin: auto;
+    padding: 35px;
+    box-sizing: border-box;
+    background: rgba(255, 255, 255, 0.72);
+    border: 1px solid rgba(255, 255, 255, 0.9);
+    border-radius: 30px;
+    box-shadow: 0 15px 45px rgba(177, 104, 151, 0.15);
+    text-align: center;
+    backdrop-filter: blur(12px);
+}
+
+.lock-icon {
+    font-size: 2.5rem;
+    margin-bottom: 8px;
+}
+
+.lock-panel h1 {
+    color: #bd5487;
+    font-size: 2.3rem;
+    margin: 5px 0;
+}
+
+.lock-subtitle {
+    color: #98617f;
+    font-size: 0.95rem;
+    margin-bottom: 25px;
+}
+
+.pin-heading {
+    color: #a94f7c;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.pin-dots {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin: 20px 0 25px;
+}
+
+.pin-dots span {
+    width: 12px;
+    height: 12px;
+    border: 2px solid #d987ad;
+    border-radius: 50%;
+    background: transparent;
+    transition: 0.2s ease;
+}
+
+.pin-dots span.filled {
+    background: #d875a4;
+    transform: scale(1.15);
+}
+
+/* NUMBER KEYPAD */
+
+.keypad {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    max-width: 280px;
+    margin: auto;
+}
+
+.key {
+    width: 65px;
+    height: 65px;
+    margin: auto;
+    border: none;
+    border-radius: 50%;
+    background: #fce6f0;
+    color: #a94f7c;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.35rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.25s ease;
+    box-shadow: 0 4px 12px rgba(194, 91, 143, 0.08);
+}
+
+.key:hover {
+    background: #f6c9df;
+    transform: translateY(-3px);
+}
+
+.key:active {
+    transform: scale(0.92);
+}
+
+.special-key {
+    background: #f5d8e8;
+}
+
+/* UNLOCK BUTTON */
+
+.unlock-button {
+    width: 100%;
+    margin-top: 25px;
+    padding: 15px;
+    border: none;
+    border-radius: 50px;
+    background: linear-gradient(135deg, #f48fb1, #c77dce);
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 8px 20px rgba(199, 125, 206, 0.25);
+    transition: 0.3s ease;
+}
+
+.unlock-button:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 25px rgba(199, 125, 206, 0.4);
+}
+
+.lock-message {
+    color: #b77c9c;
+    font-size: 0.85rem;
+    margin-top: 18px;
+    min-height: 22px;
+}
+
+/* MOBILE RESPONSIVENESS */
+
+@media (max-width: 800px) {
+    .lock-screen {
+        padding: 25px 15px;
+    }
+
+    .lock-layout {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .photo-decoration {
+        width: 260px;
+        height: 250px;
+    }
+
+    .heart-photo-frame {
+        width: 210px;
+        height: 210px;
+        clip-path: path("M 105 195 C 90 180 8 125 8 67 C 8 12 78 -8 105 43 C 132 -8 202 12 202 67 C 202 125 120 180 105 195 Z");
+    }
+
+    .lock-photo-section h2 {
+        font-size: 1.4rem;
+    }
+
+    .lock-photo-section p {
+        font-size: 0.85rem;
+    }
+
+    .lock-panel {
+        padding: 25px 20px;
+    }
+
+    .lock-panel h1 {
+        font-size: 1.9rem;
+    }
+
+    .key {
+        width: 58px;
+        height: 58px;
+    }
+}

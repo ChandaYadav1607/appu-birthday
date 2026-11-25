@@ -287,3 +287,82 @@ finishLetter.addEventListener("click", () => {
     });
 
 });
+
+// ===== SECRET 8-DIGIT PASSCODE =====
+
+const lockScreen = document.getElementById("lockScreen");
+const pinDots = document.querySelectorAll("#pinDots span");
+const keys = document.querySelectorAll(".key[data-number]");
+const deletePin = document.getElementById("deletePin");
+const clearPin = document.getElementById("clearPin");
+const unlockButton = document.getElementById("unlockButton");
+const lockMessage = document.getElementById("lockMessage");
+
+const correctPin = "02271622";
+let enteredPin = "";
+
+// Show lock screen first and hide the welcome screen
+
+lockScreen.style.display = "flex";
+welcomeScreen.style.display = "none";
+
+// Update the eight PIN dots
+
+function updatePinDots() {
+    pinDots.forEach((dot, index) => {
+        dot.classList.toggle("filled", index < enteredPin.length);
+    });
+}
+
+// Add a digit when a keypad button is clicked
+
+keys.forEach((key) => {
+    key.addEventListener("click", () => {
+
+        if (enteredPin.length < 8) {
+            enteredPin += key.dataset.number;
+            updatePinDots();
+            lockMessage.textContent = "Made with love, just for you ✨";
+        }
+
+    });
+});
+
+// Delete the last digit
+
+deletePin.addEventListener("click", () => {
+    enteredPin = enteredPin.slice(0, -1);
+    updatePinDots();
+});
+
+// Clear the complete PIN
+
+clearPin.addEventListener("click", () => {
+    enteredPin = "";
+    updatePinDots();
+    lockMessage.textContent = "Made with love, just for you ✨";
+});
+
+// Unlock the birthday website
+
+unlockButton.addEventListener("click", () => {
+
+    if (enteredPin === correctPin) {
+
+        lockMessage.textContent = "Yay! You unlocked your surprise! 💗";
+
+        setTimeout(() => {
+            lockScreen.style.display = "none";
+            welcomeScreen.style.display = "flex";
+        }, 800);
+
+    } else {
+
+        lockMessage.textContent = "Oops! That's not our secret code. Try again! 💌";
+
+        enteredPin = "";
+        updatePinDots();
+
+    }
+
+});

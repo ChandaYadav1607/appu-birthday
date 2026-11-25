@@ -15,6 +15,88 @@
 </head>
 <body>
 
+<!-- ===== SECRET PASSCODE SCREEN ===== -->
+
+<section class="lock-screen" id="lockScreen">
+
+    <div class="lock-layout">
+
+        <!-- LEFT SIDE: APPU'S PHOTO -->
+
+        <div class="lock-photo-section">
+
+            <div class="photo-decoration">
+                <span class="decor decor-one">✧</span>
+                <span class="decor decor-two">♡</span>
+                <span class="decor decor-three">✿</span>
+                <span class="decor decor-four">✨</span>
+
+                <div class="heart-photo-frame">
+                    <img src="images/appu-lock-photo.jpeg"
+                         alt="A special picture of Appu">
+                </div>
+            </div>
+
+            <h2>A Little World Made For You</h2>
+            <p>Because someone as special as you deserves a little magic ♡</p>
+
+        </div>
+
+
+        <!-- RIGHT SIDE: PASSCODE KEYPAD -->
+
+        <div class="lock-panel">
+
+            <div class="lock-icon">🔒</div>
+
+            <h1>Hey Appu!</h1>
+
+            <p class="lock-subtitle">
+                A little surprise is waiting inside...
+            </p>
+
+            <p class="pin-heading">Enter your secret passcode</p>
+
+            <div class="pin-dots" id="pinDots">
+                <span></span><span></span><span></span><span></span>
+                <span></span><span></span><span></span><span></span>
+            </div>
+
+            <div class="keypad">
+
+                <button class="key" data-number="1">1</button>
+                <button class="key" data-number="2">2</button>
+                <button class="key" data-number="3">3</button>
+
+                <button class="key" data-number="4">4</button>
+                <button class="key" data-number="5">5</button>
+                <button class="key" data-number="6">6</button>
+
+                <button class="key" data-number="7">7</button>
+                <button class="key" data-number="8">8</button>
+                <button class="key" data-number="9">9</button>
+
+                <button class="key special-key" id="deletePin">⌫</button>
+                <button class="key" data-number="0">0</button>
+                <button class="key special-key" id="clearPin">C</button>
+
+            </div>
+
+            <button id="unlockButton" class="unlock-button">
+                Unlock My Surprise ♡
+            </button>
+
+            <p id="lockMessage" class="lock-message">
+                Made with love, just for you ✨
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
 <!-- BACKGROUND MUSIC -->
 
 <audio id="birthdayMusic" loop>
